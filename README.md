@@ -66,12 +66,12 @@ pip install -r backend/requirements.txt
 2. Import the database:
 - Open MySQL Workbench or phpMyAdmin
 - Run the file located at:
-  ```
-  db/schema.sql
-  ```
+```
+db/schema.sql
+```
 
 3. Configure the database connection inside:
- ```
+```
 backend/db_config.py
 ```
 5. Run the Flask application:
