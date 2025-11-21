@@ -71,15 +71,18 @@ pip install -r backend/requirements.txt
   ```
 
 3. Configure the database connection inside:
+ ```
 backend/db_config.py
-
-4. Run the Flask application:
+```
+5. Run the Flask application:
+```
 python backend/app.py
-
+```
 ## SQL File
 Full schema, triggers, procedures, functions included in:
+```
 db/schema.sql
-
+```
 ---
 
 ## Acknowledgment
