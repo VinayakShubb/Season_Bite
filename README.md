@@ -29,17 +29,15 @@ This project was developed as part of the DBMS Mini Project.
 
 ```
 
-restaurant_app/
+backend/
+│ ├── app.py
+│ ├── db_config.py
+│ └── requirements.txt
 │
-├── backend/
-│   ├── app.py
-│   ├── db_config.py
-│   └── requirements.txt
+db/
+│ └── schema.sql
 │
-├── db/
-│   └── schema.sql
-│
-└── frontend/
+frontend/
 ├── index.html
 ├── app.js
 ├── style.css
