@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SeasonBite - Fine Dining</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Auth/Login/Signup Card -->
+    <div id="authContainer" class="auth-container" style="display:none;">
+        <div id="loginBox" class="auth-box">
+            <span class="close" onclick="closeAuthBox()" title="Go Back">&times;</span>
+            <h2>Login</h2>
+            <input type="text" id="loginPhone" placeholder="Phone Number">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button onclick="handleLogin()">Login</button>
+            <p>New user? <span onclick="showSignup()">Signup here</span></p>
+        </div>
+        <div id="signupBox" class="auth-box" style="display:none;">
+            <span class="close" onclick="closeAuthBox()" title="Go Back">&times;</span>
+            <h2>Signup</h2>
+            <input type="text" id="signupName" placeholder="Name">
+            <input type="text" id="signupPhone" placeholder="Phone Number">
+            <input type="password" id="signupPassword" placeholder="Password">
+            <button onclick="handleSignup()">Signup</button>
+            <p>Already have an account? <span onclick="showLogin()">Login here</span></p>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-left">
+            <span class="rest-name">SEASONBITE <span class="fine-dining">Fine dining</span></span>
+        </div>
+        <div class="header-right">
+            <button id="aboutBtn">About Us</button>
+            <button id="loginBtn" onclick="openAuthBox()">Login</button>
+        </div>
+    </header>
+
+    <!-- Hero Section: BG image & Centered Buttons and overlays -->
+    <section class="hero-bg">
+        <div class="hero-center">
+            <button id="bookTableBtn" class="hero-btn">Book a Table</button>
+            <button id="menuBtn" class="hero-btn">Menu</button>
+        </div>
+            <!-- Reservation Popup -->
+            <section id="reservationSection" class="floating-overlay" style="display:none;">
+                <h2>Book a Table</h2>
+                <input type="date" id="resDate">
+                <input type="time" id="resTime">
+                <select id="resTable">
+                    <option value="">Select a Table</option>
+                </select>
+                <button id="confirmReservation">Confirm Reservation</button>
+            </section>
+
+            <!-- Menu Popup -->
+            <div id="menuPopup" class="floating-overlay" style="display:none;">
+                <h2>Menu <span class="close" onclick="closeMenu()">x</span></h2>
+                <div id="menuItems" class="menu-items-scroll"></div>
+                <button onclick="proceedToOrder()">Proceed</button>
+            </div>
+
+            <!-- Order Summary -->
+            <section id="orderSection" class="floating-overlay" style="display:none;">
+                <h2>Your Order Summary</h2>
+                <div id="orderSummary"></div>
+                <button onclick="payNow()">Pay Now</button>
+            </section>
+
+            <!-- Payment Section -->
+            <section id="paymentSection" class="floating-overlay" style="display:none;">
+                <h2>Payment</h2>
+                <input type="number" id="payAmount" placeholder="Amount" readonly>
+                <select id="payMethod">
+                    <option value="">Select Payment Method</option>
+                    <option>Cash</option>
+                    <option>Card</option>
+                    <option>UPI</option>
+                </select>
+                <button onclick="confirmPay()">Confirm Payment</button>
+            </section>
+
+            <!-- Profile Section -->
+            <section id="profileSection" class="floating-overlay" style="display:none;">
+                <h2>Your Profile</h2>
+                <div id="profileDetails"></div>
+                <button onclick="closeProfile()">Close</button>
+            </section>
+        </div>
+    </section>
+
+    <!-- Scrollable About Us Section -->
+    <section id="aboutUsSection" class="about-scroll-section">
+        <h2>About Us</h2>
+        <div class="about-images">
+            <img src="image1.png" alt="SeasonBite ambiance">
+            <img src="image2.png" alt="SeasonBite cuisine">
+        </div>
+        <div class="about-desc">
+            Welcome to SEASONBITE!<br>
+            We are a modern fine dining restaurant offering a unique culinary experience.<br>
+            Our menu features fresh, local ingredients and a variety of cuisines to delight every guest.<br><br>
+            Thank you for choosing us for your special moments!
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("aboutBtn").onclick = function() {
+            document.getElementById("aboutUsSection").scrollIntoView({behavior: "smooth"});
+        };
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
