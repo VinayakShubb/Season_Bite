@@ -25,18 +25,19 @@ This project was developed as part of the DBMS Mini Project.
 - Join, nested, and aggregate SQL queries
 - Complete database schema included
 
----
-
 ## Project Structure
+
+```
+
 restaurant_app/
 │
 ├── backend/
-│ ├── app.py
-│ ├── db_config.py
-│ └── requirements.txt
+│   ├── app.py
+│   ├── db_config.py
+│   └── requirements.txt
 │
 ├── db/
-│ └── schema.sql
+│   └── schema.sql
 │
 └── frontend/
 ├── index.html
@@ -46,8 +47,8 @@ restaurant_app/
 ├── image2.png
 └── pexels-pixabay-262047.jpg
 
+```
 
----
 
 ## Technologies Used
 
